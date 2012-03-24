@@ -11,11 +11,12 @@ import javax.ws.rs.Produces;
 public class Resource {
 
     private static final Logger logger = LoggerFactory.getLogger(Resource.class);
+    public static final String RESOURCE = "some resource";
 
     @GET
     @Produces("text/plain")
     public String getResource() {
         logger.info("request for resource");
-        return "some resource";
+        return RESOURCE;
     }
 }

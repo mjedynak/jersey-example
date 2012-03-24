@@ -25,8 +25,8 @@ public class App {
 
     public static void main(String[] args) throws IOException {
         HttpServer httpServer = startServer();
-        logger.debug("Jersey app started with WADL available at %sapplication.wadl");
-        logger.debug(String.format("Try out %sresource\nHit enter to stop it...", BASE_URI, BASE_URI));
+        logger.debug(String.format("Jersey app started with WADL available at %sapplication.wadl"), BASE_URI);
+        logger.debug(String.format("Try out %sresource\nHit enter to stop it...", BASE_URI));
         System.in.read();
         httpServer.stop();
     }
